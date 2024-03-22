@@ -24,7 +24,9 @@ try {
         throw "No serial number"
     }
 
+
     
+
 
 } catch {
     throw $_.Exception.Message
