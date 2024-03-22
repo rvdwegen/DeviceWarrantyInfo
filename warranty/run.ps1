@@ -16,7 +16,7 @@ try {
 
 try {
 
-ls
+    $driver = Invoke-ChromeBrowser
 
     if (!$manufacturer) {
         throw "No manufacturer select, valid manufacturers are..."

@@ -13,4 +13,4 @@ function Invoke-ChromeBrowser {
     return $driver
 }
 
-Export-ModuleMember -Function @('Invoke-URLRedirect')
+Export-ModuleMember -Function @('Invoke-ChromeBrowser')
