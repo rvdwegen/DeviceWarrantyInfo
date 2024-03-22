@@ -15,9 +15,10 @@ try {
 }
 
 try {
-
+ls
     function Invoke-ChromeBrowser2 {
-        $WebDriverPath = ".\resources"
+        #$WebDriverPath = ".\resources"
+        $WebDriverPath = "C:\home\site\wwwroot\resources"
         $ChromeService = [OpenQA.Selenium.Chrome.ChromeDriverService]::CreateDefaultService($WebDriverPath, 'chromedriver.exe')
         $ChromeService.HideCommandPromptWindow = $true
         $chromeOptions = [OpenQA.Selenium.Chrome.ChromeOptions]::new()
