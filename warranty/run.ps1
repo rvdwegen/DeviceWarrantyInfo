@@ -50,7 +50,7 @@ ls
 
 
 } catch {
-    throw $_.Exception.Message
+    throw "$($_.InvocationInfo.ScriptLineNumber): $($_.Exception.Message)"
 }
 
 # Associate values to output bindings by calling 'Push-OutputBinding'.
