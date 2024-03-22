@@ -13,6 +13,7 @@ using namespace System.Net
 
 Import-Module -Name Az.Accounts
 Import-Module '.\Modules\AzBobbyTables'
+Import-Module '.\Modules\selenium'
 Import-Module '.\Modules\helperFunctions.psm1'
 
 $ProgressPreference = 'SilentlyContinue'
