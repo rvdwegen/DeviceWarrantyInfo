@@ -16,7 +16,22 @@ try {
 
 try {
 
-    $driver = Invoke-ChromeBrowser
+    function Invoke-ChromeBrowser2 {
+        $WebDriverPath = ".\resources"
+        $ChromeService = [OpenQA.Selenium.Chrome.ChromeDriverService]::CreateDefaultService($WebDriverPath, 'chromedriver.exe')
+        $ChromeService.HideCommandPromptWindow = $true
+        $chromeOptions = [OpenQA.Selenium.Chrome.ChromeOptions]::new()
+        $Headless = $false
+        if($Headless -eq $true){
+            $chromeOptions.AddArgument("headless")
+        }
+        $chromeOptions.AddArgument("--log-level=3")
+        $driver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($ChromeService, $chromeOptions)
+    
+        return $driver
+    }
+
+    $driver = Invoke-ChromeBrowser2
 
     if (!$manufacturer) {
         throw "No manufacturer select, valid manufacturers are..."
