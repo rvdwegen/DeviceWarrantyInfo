@@ -16,6 +16,8 @@ try {
 
 try {
 
+ls
+
     if (!$manufacturer) {
         throw "No manufacturer select, valid manufacturers are..."
     }
