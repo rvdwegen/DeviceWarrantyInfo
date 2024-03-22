@@ -25,7 +25,10 @@ try {
     }
 
 
-    
+    $result = [pscustomobject]@{
+        manufacturer = $manufacturer
+        serialnumber = $serialNumber
+    }
 
 
 } catch {
